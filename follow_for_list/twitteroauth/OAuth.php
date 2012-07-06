@@ -1,5 +1,5 @@
 <?php
-/* спасибо pupkinzade за это */
+/* Thank you for this pupkinzade */
 class OAuthException extends Exception {
 
 }
