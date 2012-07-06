@@ -1,16 +1,20 @@
 <? 
-$file_index='file.txt'; /* полный путь к файлу */	 
-$numb=3; /* количество фолловеров за которыми последуем, оптимальное число 3*/
+/* PupkinZade Inc.
+* Russian and English version. Allows follow from list
+* Р СѓСЃСЃРєР°СЏ Рё Р°РЅРіР»РёР№СЃРєР°СЏ РІРµСЂСЃРёРё. РџРѕР·РІРѕР»СЏРµС‚ С„РѕР»Р»РѕРІРёС‚СЊ РёР· СЃРїРёСЃРєР°
+*/
+$file_index='file.txt'; /* РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ/full path name */
+$numb=3; /*  РєРѕР»РёС‡РµСЃС‚РІРѕ С„РѕР»Р»РѕРІРµСЂРѕРІ Р·Р° РєРѕС‚РѕСЂС‹РјРё РїРѕСЃР»РµРґСѓРµРј, РѕРїС‚РёРјР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ 3/the number of followers that follow, the optimal number 3 */
 
-$consumer_key=""; /* тут ваш CONSUMER-KEY */
-$consumer_sec=""; /* тут ваш CONSUMER-SECRET */
-$oauth_tok="";  /* тут ваш OAUTH-TOKEN */
-$oauth_sec=""; /* тут ваш OAUTH-SECRET */
+$consumer_key=""; /* your CONSUMER-KEY*/
+$consumer_sec=""; /* your CONSUMER-SECRET */
+$oauth_tok="";  /*  your OAUTH-TOKEN */
+$oauth_sec=""; /*  your OAUTH-SECRET */
 
 /** 
-* Ключи для приложения можно получить тут http://pupkin.u-gu.ru/twitter/Pupkinzadeauth/ 
+* Keys to the application can be obtained here/РљР»СЋС‡Рё РґР»СЏ РїСЂРёР»РѕР¶РµРЅРёСЏ РјРѕР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ С‚СѓС‚: http://pupkin.u-gu.ru/twitter/Pupkinzadeauth/ 
 *
-* Или создать свое приложение тут https://dev.twitter.com/apps/new 
+* РР»Рё СЃРѕР·РґР°С‚СЊ СЃРІРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ С‚СѓС‚/Or create your application here:https://dev.twitter.com/apps/new 
 */
 
 
@@ -30,7 +34,7 @@ $status="follow @" . $follower;
 	$connection = new TwitterOAuth($consumer_key, $consumer_sec, $oauth_tok, $oauth_sec);
 	$connection->format = 'xml';
 
-echo "<li>Вы последовали за: ". $follower ."</li>";
+echo "<li>You followed: ". $follower ."</li>";
 $connection->post('statuses/update', array('status'=>$status));
 }
 $file = file($file_index); 
