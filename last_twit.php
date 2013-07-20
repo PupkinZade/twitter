@@ -61,7 +61,7 @@ class GetLastTwitt{
 }
 
 
-$a = new GetLastTwitt('skaizer'); /* тут ваш ник */
+$a = new GetLastTwitt('Twitter_nik'); /* Your nikname */
 echo $a->getLast();
 
 ?>
