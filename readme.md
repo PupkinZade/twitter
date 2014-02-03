@@ -28,9 +28,10 @@ The send() method updates your status. The message must be encoded in UTF-8:
 
 Get the first 5000 followings
 
-$twitter = $connection->request('friends/ids', 'GET', array('screen_name' => 'Username'));
-foreach ($twitter->ids as $id) {
-echo $id."<br />"; }
+	$twitter = $connection->request('friends/ids', 'GET', array('screen_name' => 'Username'));
+	foreach ($twitter->ids as $id) {
+	echo $id."<br />"	
+		}
 
 -----
 Project at GitHub: https://github.com/PupkinZade/twitter
