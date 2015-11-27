@@ -8,7 +8,7 @@ A simple collection of php scripts to automate your twitter
 
 Usage
 -----
-<p itemprop="description">The most popular PHP library for Twitter's [OAuth REST API](https://github.com/abraham/twitteroauth).</p>
+<p itemprop="description">The most popular PHP library for Twitter's <a href="https://github.com/abraham/twitteroauth">OAuth REST API</a>.</p>
 
 See documentation at https://twitteroauth.com.
 
